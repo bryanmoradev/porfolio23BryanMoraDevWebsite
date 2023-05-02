@@ -13,7 +13,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  
+  background: url("./img/Edificios.jpg");
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
 `;
 
 const Left = styled.div`

@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Center, OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+
 
 
 const data = [
@@ -8,12 +11,14 @@ const data = [
   "Multimedia Art",
 ];
 const Section = styled.div`
+
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
 `
 const Container = styled.div`
+
   width: 1400px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +28,14 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 ` 
+const Div = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+`
 const List = styled.ul`
   list-style: none;
   display: flex;
@@ -31,7 +43,7 @@ const List = styled.ul`
   gap: 20px;
 `
 const ListItem = styled.li`
-font-size: 4rem;
+font-size: 4.5rem;
 cursor: pointer;
 color: transparent;
 -webkit-text-stroke: 2px white; 
@@ -64,26 +76,34 @@ position: relative;
 }
 `;
 
-const Right = styled.div`
-  flex: 1;
- 
-  
-`
+
+
 
 const Works = () => {
+  
   return (
     <Section>
       <Container>
+
         <Left>
+          <Div>
+          <Canvas camera={{fov:10, position:[3.5, 3.5, 3.5]}}>
+            <OrbitControls enableZoom={false} autoRotate={true}/>
+            <ambientLight intensity={1}/>
+            <directionalLight position={[10,2,1]}/>
+            <mesh>
+                <dodecahedronGeometry arg={[10, 10, 10]}/>
+                <meshStandardMaterial color="#8E44AD" wireframe={true}/>
+            </mesh>
+        </Canvas>
+          </Div>
+        
           <List>
             {data.map((item) =>(
               <ListItem key={item} text={item}>{item}</ListItem>
-            ))}
-            
-            
+            ))} 
           </List>
         </Left>
-        <Right></Right>
       </Container>
     </Section>
   )

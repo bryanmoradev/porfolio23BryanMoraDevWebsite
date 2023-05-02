@@ -17,6 +17,10 @@ const Container = styled.div`
   width: 80%;
   display: flex;
   justify-content: space-between;
+  background: url("./img/About.jpg");
+  min-width: 100%;
+  background-size: cover;
+  background-position: center;
 `;
 
 const Left = styled.div`
@@ -70,7 +74,7 @@ const Title = styled.h1`
   
 `;
 const Subtitle = styled.h2`
-  color: #6C3483;
+  color: black;
   
 `;
 const Paragrahp = styled.h3`
@@ -88,7 +92,7 @@ const Who = () => {
             <directionalLight position={[10,2,1]}/>
             <mesh>
                 <icosahedronGeometry arg={[5, 5, 5]}/>
-                <meshStandardMaterial color="#8E44AD"/>
+                <meshStandardMaterial color="#8E44AD" wireframe={true}/>
             </mesh>
         </Canvas>
         </Left>

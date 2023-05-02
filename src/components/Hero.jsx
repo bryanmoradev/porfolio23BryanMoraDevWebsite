@@ -88,7 +88,7 @@ const hero = () => {
             <ambientLight intensity={1}/>
             <directionalLight position={[5,5,5]}/>
             <Sphere args={[1, 200, 200]} scale={1.6}>
-            <MeshDistortMaterial color={"#633974"} distort={1} speed={3}/>
+            <MeshDistortMaterial color={"#633974"} wireframe={true} distort={1} speed={3}/>
             </Sphere>
         </Canvas> 
         </Right>
