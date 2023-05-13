@@ -13,15 +13,23 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  
+  @media only screen and (max-width: 760px){
+    height: 200vh;
+}
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 80%;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 760px){
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 `;
 
 const Left = styled.div`
@@ -30,9 +38,20 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media only screen and (max-width: 760px){
+    flex: 1;
+    align-items: center;
+}
 `;
 const Title = styled.h1`
   font-size: 74px;
+  @media only screen and (max-width: 760px){
+    font-size: 60px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
   
 
   
@@ -42,6 +61,11 @@ const Subtitle = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.8px transparent;
+  @media only screen and (max-width: 760px){
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
   
 `;
 const Button2 = styled.button`
@@ -56,6 +80,10 @@ border: none;
 border-radius: 10px;
 cursor: pointer; 
 white-space: nowrap; 
+@media only screen and (max-width: 760px){ 
+  font-size: 18px; 
+  width: 170px;
+}
   
 `;
 const Logo = styled.img`
@@ -68,13 +96,17 @@ top: 6px;
 const Right = styled.div`
   flex: 3;
   position: relative;
+  @media only screen and (max-width: 760px){
+    flex: 1;
+    width: 100%;
+}
   
 `;
 
 
 const hero = () => {
   return (
-    <Section>
+    <Section id="home">
       <Navbar/>
       <Container>
         <Left>

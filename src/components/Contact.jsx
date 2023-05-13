@@ -24,31 +24,39 @@ const Left = styled.div`
  display: flex;
  justify-content: flex-end; 
  align-items: center;
- 
+ @media only screen and (max-width: 760px){
+  justify-content: center;
+
 `;
 
 const Title = styled.h1`
- font-weight: 200;
+ font-weight: 900;
   
 `;
 const Form = styled.form`
  width: 500px;
  display: flex;
  flex-direction: column;
- gap: 20px
-
+ gap: 20px;
+ 
+@media only screen and (max-width: 760px){
+    width: 300px;
 `;
 const Input = styled.input`
   padding: 20px;
   backgroun-color: lightgray;
   border: none;
   border-radius: 5px;
+  font-weight: 950;
+  background: rgb(220, 215, 226);
 `;
 const TextArea = styled.textarea`
   padding: 20px;
   backgroun-color: lightgray;
   border: none;
   border-radius: 5px;
+  font-weight: 950;
+  background: rgb(220, 215, 226);
 `;
 const Button = styled.button`
   background-color: #BFC9CA;
@@ -64,6 +72,8 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  @media only screen and (max-width: 760px){
+    display: none;
 `
 
 const Contact = () => {

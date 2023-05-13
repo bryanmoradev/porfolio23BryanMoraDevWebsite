@@ -22,6 +22,10 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 760px){
+    width: 100%;
+    flex-direction: column;
+}
 `
 const Left = styled.div`
   flex: 1;
@@ -41,6 +45,10 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media only screen and (max-width: 760px){ 
+    
+    align-items: center;
+  }
 `
 const ListItem = styled.li`
 font-size: 4.5rem;
@@ -48,6 +56,13 @@ cursor: pointer;
 color: transparent;
 -webkit-text-stroke: 2px white; 
 position: relative;
+@media only screen and (max-width: 760px){
+ 
+  font-size: 2.5rem;
+  color: white;
+  -webkit-text-stroke: 0px;
+
+}
 
 ::after{
   content: "${(props)=>props.text}";
@@ -61,6 +76,8 @@ position: relative;
   -webkit-text-stroke: 6px transparent; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
+  }
 }
 
 &:hover{
@@ -82,7 +99,7 @@ position: relative;
 const Works = () => {
   
   return (
-    <Section>
+    <Section id="proyects">
       <Container>
 
         <Left>

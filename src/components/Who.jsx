@@ -26,22 +26,13 @@ const Container = styled.div`
 const Left = styled.div`
   flex: 1;
   position: relative;
+
+  @media only screen and (max-width: 760px){
+    display: none;
+}
 `;
 
-const Button2 = styled.button`
-background-color: rgba(191, 201, 202, 0.7);
-font-weight: bold;
-color: black;
-font-size: 15px;
-width: 100px;
-width: 132px;
-padding: 10px;
-border: none; 
-border-radius: 10px;
-cursor: pointer; 
-white-space: nowrap; 
-  
-`;
+
 
 const Img = styled.img`
 width: 500px;
@@ -64,26 +55,63 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
- 
+  @media only screen and (max-width: 760px){
+    align-items: center;
+    text-align: center;
+}
   
 `;
 
 const Title = styled.h1`
   font-size: 74px;
-
+  @media only screen and (max-width: 760px){
+    font-size: 60px;
+}
+@media only screen and (max-width: 375px){
+  font-size: 40px
+}
   
 `;
 const Subtitle = styled.h2`
   color: black;
+  font-size: 25px;
+  padding-right: 30px;
+  font-weight: 950;
+
+  @media only screen and (max-width: 760px){
+    padding: 0px 20px;
+   text-align: center;
+}
+@media only screen and (max-width: 375px){
+  font-size: 20px;
+}
   
 `;
 const Paragrahp = styled.h3`
 color: white;
 `;
 
+const Button2 = styled.button`
+background-color: rgba(191, 201, 202, 0.7);
+font-weight: bold;
+color: black;
+font-size: 15px;
+width: 100px;
+width: 132px;
+padding: 10px;
+border: none; 
+border-radius: 10px;
+cursor: pointer; 
+white-space: nowrap; 
+@media only screen and (max-width: 760px){ 
+  font-size: 18px; 
+}
+  
+`;
+
 const Who = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Left>
         <Canvas camera={{fov:35, position:[3.5, 3.5, 3.5]}}>
@@ -98,9 +126,10 @@ const Who = () => {
         </Left>
         <Right>
           <Title>About</Title>
-          <Subtitle>Bienvenido al portafolio de Bryan, un desarrollador web frontend con habilidades en tecnologías como HTML, CSS, Bootstrap, JavaScript y React. Con una pasión por el diseño y la programación, Bryan crea sitios web hermosos y funcionales que combinan la estética y la funcionalidad.</Subtitle>
+          <Subtitle>Bienvenido al portafolio de Bryan, un desarrollador web frontend con habilidades en tecnologías como HTML, CSS, Bootstrap, JavaScript y React.Con una pasión por el diseño y la programación, Bryan crea sitios web hermosos y funcionales que combinan la estética y la funcionalidad.</Subtitle>
           <Paragrahp>From Ecuador,<br/>Working Worldwide.</Paragrahp>
-          <Button2>Résumé</Button2>
+          <a href="./public/img/CV-Bryan-Mora-dev.pdf" download> <Button2>Résumé</Button2></a>
+         
         </Right>
       </Container>
     </Section>
