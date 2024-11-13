@@ -111,7 +111,7 @@ const hero = () => {
       <Container>
         <Left>
           <Title>Hi, I'm a Creative Developer</Title>
-          <Subtitle>Front-End | Multimedia Artist</Subtitle>
+          <Subtitle>Front-End | UX/UI Designer</Subtitle>
           <Button2>What I made<Logo src="./img/icons8-turn-32.png"/></Button2>
         </Left>
         <Right>

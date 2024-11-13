@@ -63,6 +63,7 @@ const Right = styled.div`
 `;
 
 const Title = styled.h1`
+  color: black;
   font-size: 74px;
   @media only screen and (max-width: 760px){
     font-size: 60px;
@@ -73,7 +74,7 @@ const Title = styled.h1`
   
 `;
 const Subtitle = styled.h2`
-  color: black;
+  color: #E5E2E8;
   font-size: 25px;
   padding-right: 30px;
   font-weight: 950;
@@ -88,6 +89,10 @@ const Subtitle = styled.h2`
   
 `;
 const Paragrahp = styled.h3`
+background: linear-gradient(to right, #ff0000, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.8px transparent;
 color: white;
 `;
 
@@ -127,7 +132,7 @@ const Who = () => {
         <Right>
           <Title>About</Title>
           <Subtitle>Bienvenido al portafolio de Bryan, un desarrollador web frontend con habilidades en tecnologías como HTML, CSS, Bootstrap, JavaScript y React.Con una pasión por el diseño y la programación, Bryan crea sitios web hermosos y funcionales que combinan la estética y la funcionalidad.</Subtitle>
-          <Paragrahp>From Ecuador,<br/>Working Worldwide.</Paragrahp>
+          <Paragrahp>From Ecuador,Working Worldwide.</Paragrahp>
           <a href="./public/img/CV-Bryan-Mora-dev.pdf" download> <Button2>Résumé</Button2></a>
          
         </Right>
